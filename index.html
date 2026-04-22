@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -66,18 +67,12 @@
     .hero h1{
       margin:0;
       font-size: 34px;
-      letter-spacing: -0.4px;
     }
 
     .grid{
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap: 22px;
-      align-items: start;
-    }
-
-    @media(max-width: 980px){
-      .grid{ grid-template-columns: 1fr; }
     }
 
     .card{
@@ -85,480 +80,114 @@
       backdrop-filter: blur(26px);
       border: 1px solid var(--glass-border);
       border-radius: var(--radius-lg);
-      box-shadow:
-        0 40px 80px rgba(0,0,0,0.12),
-        inset 0 1px 0 rgba(255,255,255,0.6);
-      overflow: hidden;
-    }
-
-    .hd{
-      padding: 22px 22px 14px;
-    }
-
-    .title{
-      font-size: 18px;
-      font-weight: 800;
-      margin:0;
-    }
-
-    .sub{
-      margin-top: 6px;
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.45;
-    }
-
-    .bd{
-      padding: 0 22px 24px;
-    }
-
-    label{
-      display:block;
-      margin-top: 14px;
-      font-size: 13px;
-      color: var(--text-muted);
+      padding:20px;
     }
 
     input, textarea{
       width:100%;
-      margin-top: 8px;
-      padding: 14px 16px;
-      border-radius: var(--radius-md);
-      border: none;
-      background: var(--glass-bg-strong);
-      backdrop-filter: blur(12px);
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.05);
-      font-size: 14px;
-    }
-
-    input:focus, textarea:focus{
-      outline: none;
-      box-shadow:
-        0 0 0 3px rgba(245,158,11,0.35),
-        inset 0 0 0 1px rgba(0,0,0,0.05);
-    }
-
-    textarea{
-      min-height: 150px;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      resize: vertical;
-    }
-
-    textarea.outbox{
-      min-height: 120px;
-      height: auto;
-      overflow: hidden;
-      resize: none;
-      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-      white-space: pre;
-      line-height: 1.45;
-    }
-
-    .row{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    @media(max-width: 520px){
-      .row{ grid-template-columns: 1fr; }
-    }
-
-    .btnrow{
-      display:flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 16px;
+      margin-top:8px;
+      padding:12px;
+      border-radius:10px;
+      border:none;
     }
 
     .btn{
-      padding: 13px 18px;
-      border-radius: 999px;
-      border: none;
-      font-weight: 700;
-      cursor: pointer;
-      background: #111827;
-      color: white;
-      font-size: 13px;
-    }
-
-    .btn.primary{
-      background: linear-gradient(135deg, #fbbf24, #f59e0b);
-      color: #111827;
-    }
-
-    .btn.ghost{
-      background: rgba(0,0,0,0.06);
-      color: var(--text-dark);
-    }
-
-    .hint{
-      margin-top: 10px;
-      color: rgba(107,114,128,0.95);
-      font-size: 12px;
-      line-height: 1.45;
-    }
-
-    .err{
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      background: rgba(239,68,68,0.12);
-      color: #7f1d1d;
-      white-space: pre-wrap;
-      font-size: 12px;
-      line-height: 1.45;
-    }
-
-    .ok{
-      margin-top: 14px;
-      padding: 12px 14px;
-      border-radius: var(--radius-md);
-      background: rgba(16,185,129,0.18);
-      color: #064e3b;
-      font-size: 12px;
-      line-height: 1.45;
-    }
-
-    .out-top{
-      display:flex;
-      justify-content: space-between;
-      align-items:center;
-      gap: 10px;
-      margin-bottom: 10px;
-    }
-
-    .tag{
-      font-size: 13px;
-      color: var(--text-muted);
-      font-weight: 700;
-    }
-
-    .copybtn{
-      padding: 9px 12px;
-      border-radius: 999px;
-      border: none;
-      background: rgba(0,0,0,0.08);
+      margin-top:12px;
+      padding:10px 14px;
+      border:none;
+      border-radius:999px;
       cursor:pointer;
-      font-weight: 700;
-      font-size: 12px;
     }
 
-    .copybtn:hover{
-      background: rgba(0,0,0,0.12);
-    }
-
-    table{
-      width:100%;
-      border-collapse: collapse;
-      margin-top: 12px;
-      font-size: 12px;
-    }
-
-    th, td{
-      border: 1px solid rgba(0,0,0,0.08);
-      padding: 8px 8px;
-      text-align:right;
-      background: rgba(255,255,255,0.30);
-      vertical-align: top;
-    }
-
-    th{
-      background: rgba(255,255,255,0.55);
-      font-weight: 800;
-    }
-
-    th:first-child, td:first-child{
-      text-align:left;
-    }
-
-    .section-split{
-      display:flex;
-      align-items:center;
-      gap: 12px;
-      margin: 6px 0 8px;
-    }
-
-    .section-split .line{
-      height: 1px;
-      flex: 1;
-      background: rgba(0,0,0,0.10);
-    }
-
-    .section-split .label{
-      font-weight: 900;
-      font-size: 12px;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: rgba(17,24,39,0.72);
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.45);
-      border: 1px solid rgba(0,0,0,0.06);
-    }
-
-    .footer{
-      margin-top: 16px;
-      color: rgba(107,114,128,0.8);
-      font-size: 12px;
-      text-align:center;
-    }
-
-    .download-form{
-      margin-top: 12px;
-    }
+    .primary{background:#f59e0b;}
   </style>
+
 </head>
 
 <body>
-  <div class="nav">
-    <div class="nav-inner">
-      <div>HubScope</div>
-    </div>
+
+<div class="wrap">
+  <h1>HubScope</h1>
+
+  <div class="grid">
+
+```
+<!-- Tool A -->
+<div class="card">
+  <h3>Tool A · Region Summary</h3>
+  <p style="color:#666;font-size:13px;">
+    Each line contains a region and a batch reference.
+  </p>
+
+  <form method="POST">
+    <input type="hidden" name="tool" value="A"/>
+
+    <label>Username</label>
+    <input id="a_user" name="username" placeholder="your username">
+
+    <label>Password</label>
+    <input id="a_pass" name="password" type="password">
+
+    <label>Input</label>
+    <textarea name="text" placeholder="MIA BATCH-xxxx&#10;SJC BATCH-xxxx"></textarea>
+
+    <button class="btn primary" type="submit" onclick="saveA()">Generate</button>
+  </form>
+</div>
+
+<!-- Tool B -->
+<div class="card">
+  <h3>Tool B · Aggregation</h3>
+  <p style="color:#666;font-size:13px;">
+    Enter multiple batch references separated by commas.
+  </p>
+
+  <form method="POST">
+    <input type="hidden" name="tool" value="B"/>
+
+    <label>Username</label>
+    <input id="b_user" name="username_b" placeholder="your username">
+
+    <label>Password</label>
+    <input id="b_pass" name="password_b" type="password">
+
+    <label>Batch Reference(s)</label>
+    <input name="atsubs" placeholder="BATCH-1,BATCH-2,BATCH-3">
+
+    <button class="btn primary" type="submit" onclick="saveB()">Generate</button>
+  </form>
+</div>
+```
+
   </div>
 
-  <div class="wrap">
-    <div class="hero">
-      <div>
-        <h1>HubScope</h1>
-      </div>
-    </div>
+  <p style="margin-top:20px;color:#888;font-size:12px;">
+    Public demo version · credentials are not stored
+  </p>
 
-    <div class="grid">
-      <div class="card" id="toolA">
-        <div class="hd">
-          <p class="title">Tool A · Region Summary</p>
-          <div class="sub">每行输入一个地区和一个 ATSUB。生成后结果会保留，直到你下次重新生成 Tool A。</div>
-        </div>
-        <div class="bd">
-          <form method="POST" id="formA">
-            <input type="hidden" name="tool" value="A"/>
-
-            <div class="row">
-              <div>
-                <label>Username</label>
-                <input id="a_user" name="username" value="{{ username|default('') }}" placeholder="yujia.q_atl" required>
-              </div>
-              <div>
-                <label>Password</label>
-                <input id="a_pass" name="password" type="password" value="" placeholder="password" required>
-              </div>
-            </div>
-
-            <label>Input</label>
-            <textarea name="text" placeholder="MIA ATSUB-xxxx&#10;SJC ATSUB-xxxx">{{ text|default('') }}</textarea>
-
-            <div class="btnrow">
-              <button class="btn primary" type="submit" onclick="saveA()">Generate Tool A</button>
-              <button class="btn ghost" type="button" onclick="clearToolA()">Clear</button>
-            </div>
-
-            {% if a_error %}
-              <div class="err"><b>Tool A Error</b><br>{{ a_error }}</div>
-            {% endif %}
-
-            {% if a_message %}
-              <div class="ok">{{ a_message }}</div>
-            {% endif %}
-
-            {% if a_result %}
-              <div class="hint">Preview</div>
-              <table>
-                <thead>
-                  <tr>
-                    <th>label</th>
-                    <th>ATL</th>
-                    <th>BHM</th>
-                    <th>BFM</th>
-                    <th>CAE</th>
-                    <th>CHS</th>
-                    <th>SAV</th>
-                    <th>BNA</th>
-                    <th>JAN</th>
-                    <th>GSP</th>
-                    <th>TYS</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for region, counts in a_result %}
-                  {% set total = counts.values() | sum %}
-                  <tr>
-                    <td>{{ region }}</td>
-                    <td>{{ counts["ATL"] }}</td>
-                    <td>{{ counts["BHM"] }}</td>
-                    <td>{{ counts["BFM"] }}</td>
-                    <td>{{ counts["CAE"] }}</td>
-                    <td>{{ counts["CHS"] }}</td>
-                    <td>{{ counts["SAV"] }}</td>
-                    <td>{{ counts["BNA"] }}</td>
-                    <td>{{ counts["JAN"] }}</td>
-                    <td>{{ counts["GSP"] }}</td>
-                    <td>{{ counts["TYS"] }}</td>
-                  </tr>
-                  <tr style="font-size:11px; color:#6b7280;">
-                    <td>占比</td>
-                    <td>{{ "%.2f%%"|format(counts["ATL"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["BHM"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["BFM"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["CAE"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["CHS"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["SAV"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["BNA"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["JAN"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["GSP"]/total*100 if total else 0) }}</td>
-                    <td>{{ "%.2f%%"|format(counts["TYS"]/total*100 if total else 0) }}</td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-            {% endif %}
-          </form>
-        </div>
-      </div>
-
-      <div class="card" id="outputsA">
-        <div class="hd">
-          <p class="title">Tool A Output</p>
-          <div class="sub">复制框里包含区域名、数量和占比。每个区域之间自动空一行。</div>
-        </div>
-        <div class="bd">
-          <div class="out-top">
-            <div class="tag">Count + %</div>
-            <button class="copybtn" type="button" onclick="copyBox('a_nums')">Copy</button>
-          </div>
-
-          <textarea id="a_nums" class="outbox" readonly>{% if a_result %}{% for region, counts in a_result %}
-{{ region }}
-{% set total = counts.values() | sum %}
-{{ counts["ATL"] }}	{{ counts["BHM"] }}	{{ counts["BFM"] }}	{{ counts["CAE"] }}	{{ counts["CHS"] }}	{{ counts["SAV"] }}	{{ counts["BNA"] }}	{{ counts["JAN"] }}	{{ counts["GSP"] }}	{{ counts["TYS"] }}
-{{ "%.2f%%"|format(counts["ATL"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["BHM"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["BFM"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["CAE"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["CHS"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["SAV"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["BNA"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["JAN"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["GSP"]/total*100 if total else 0) }}	{{ "%.2f%%"|format(counts["TYS"]/total*100 if total else 0) }}
-
-{% endfor %}{% endif %}</textarea>
-        </div>
-      </div>
-
-      <div class="card" id="toolB">
-        <div class="hd">
-          <div class="section-split">
-            <div class="line"></div>
-            <div class="label">Advanced Route Analysis</div>
-            <div class="line"></div>
-          </div>
-          <p class="title">Tool B · Route Mapping</p>
-          <div class="sub">输入多个 ATSUB。生成后结果会保留，直到你下次重新生成 Tool B。</div>
-        </div>
-        <div class="bd">
-          <form method="POST" id="formB">
-            <input type="hidden" name="tool" value="B"/>
-
-            <div class="row">
-              <div>
-                <label>Username</label>
-                <input id="b_user" name="username_b" value="{{ username_b|default('') }}" placeholder="yujia.q_atl" required>
-              </div>
-              <div>
-                <label>Password</label>
-                <input id="b_pass" name="password_b" type="password" value="" placeholder="password" required>
-              </div>
-            </div>
-
-            <label>ATSUB(s)</label>
-            <input name="atsubs" value="{{ atsubs|default('') }}" placeholder="ATSUB-1,ATSUB-2,ATSUB-3">
-
-            <div class="btnrow">
-              <button class="btn primary" type="submit" onclick="saveB()">Generate Tool B</button>
-              <button class="btn ghost" type="button" onclick="clearToolB()">Clear</button>
-            </div>
-
-            {% if b_error %}
-              <div class="err"><b>Tool B Error</b><br>{{ b_error }}</div>
-            {% endif %}
-
-            {% if b_message %}
-              <div class="ok">{{ b_message }}</div>
-            {% endif %}
-
-            {% if b_detail_html %}
-              <div class="hint">Preview</div>
-              {{ b_detail_html|safe }}
-            {% endif %}
-          </form>
-        </div>
-      </div>
-
-      <div class="card" id="outputsB">
-        <div class="hd">
-          <p class="title">Tool B Output</p>
-          <div class="sub">下载一个文件，一个 sheet，包含细分和主仓两个表。</div>
-        </div>
-        <div class="bd">
-          <div class="out-top">
-            <div class="tag">Download</div>
-          </div>
-
-          <form method="POST" action="/download_cached" class="download-form">
-            <div class="btnrow">
-              <button class="btn" type="submit">Download Tool B Excel</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">HubScope</div>
-  </div>
+</div>
 
 <script>
-function copyBox(id){
-  const el = document.getElementById(id);
-  if(!el) return;
-  el.select();
-  el.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-}
-
-function autoResize(el){
-  if(!el) return;
-  el.style.height = "auto";
-  el.style.height = el.scrollHeight + "px";
-}
-
 function saveA(){
   localStorage.setItem("A", JSON.stringify({
-    username: document.getElementById("a_user") ? document.getElementById("a_user").value : "",
-    password: document.getElementById("a_pass") ? document.getElementById("a_pass").value : ""
+    username: document.getElementById("a_user").value
   }));
 }
 
 function saveB(){
   localStorage.setItem("B", JSON.stringify({
-    username: document.getElementById("b_user") ? document.getElementById("b_user").value : "",
-    password: document.getElementById("b_pass") ? document.getElementById("b_pass").value : ""
+    username: document.getElementById("b_user").value
   }));
-}
-
-function clearToolA(){
-  const text = document.querySelector('textarea[name="text"]');
-  if(text) text.value = "";
-}
-
-function clearToolB(){
-  const atsubs = document.querySelector('input[name="atsubs"]');
-  if(atsubs) atsubs.value = "";
 }
 
 window.addEventListener("load", function(){
   const a = JSON.parse(localStorage.getItem("A") || "{}");
   const b = JSON.parse(localStorage.getItem("B") || "{}");
 
-  if(a.username && document.getElementById("a_user")) document.getElementById("a_user").value = a.username;
-  if(a.password && document.getElementById("a_pass")) document.getElementById("a_pass").value = a.password;
-
-  if(b.username && document.getElementById("b_user")) document.getElementById("b_user").value = b.username;
-  if(b.password && document.getElementById("b_pass")) document.getElementById("b_pass").value = b.password;
-
-  autoResize(document.getElementById("a_nums"));
+  if(a.username) document.getElementById("a_user").value = a.username;
+  if(b.username) document.getElementById("b_user").value = b.username;
 });
 </script>
+
 </body>
 </html>
