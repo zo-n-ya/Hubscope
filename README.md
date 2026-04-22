@@ -1,56 +1,97 @@
-# Hubscope
+# Hubscope — Batch Logistics Analysis System
 
-Internal ops tool for batch analysis
+## Overview
 
-----------------------------------------
+Hubscope is a logistics analytics system designed for batch-level analysis across multiple warehouses.
 
-ACCESS
+It replaces manual spreadsheet workflows by automating data aggregation, grouping, and reporting processes.
 
-http://104.248.10.126:5050/
+---
 
-----------------------------------------
+## Core Modules
 
-FEATURES
+### Tool A — Region Summary
 
-Tool A — Region Summary
+Analyzes batch data by region and generates warehouse distribution summaries.
 
-Input:
-REGION BATCH
+**Input**
 
+* Region identifier
+* Batch reference
 
-Output:
-- Subwarehouse count (ATL / BHM / BFM / ...)
-- Percentage
-- Numbers-only block for Excel
+**Output**
 
-----------------------------------------
+* Warehouse counts
+* Percentage breakdown
+* Excel-ready numeric blocks
 
+---
 
-Tool B — Aggregation
+### Tool B — Aggregation
 
-Input:
-Multiple Batch
+Performs multi-batch analysis and generates structured warehouse insights.
 
-Output:
-- Warehouse detail counts
-- Main warehouse totals
+**Input**
 
+* Multiple batch references
 
-Download:
-- Excel
-- Single sheet
+**Output**
 
-----------------------------------------
+* Warehouse-level detail counts
+* Main warehouse totals
+* Grouped summaries (main + sub-level)
+* Excel export (single sheet)
 
-SECURITY
+---
 
-- Browser “remember” stores plaintext locally
+## Key Features
 
-----------------------------------------
+* Batch-based data analysis
+* Multi-warehouse aggregation
+* Route-based warehouse resolution
+* Parallel data fetching
+* Built-in caching for performance
+* Excel export for reporting
 
-STRUCTURE
+---
 
+## System Design
+
+* Backend: Flask
+* Data Processing: Pandas
+* Concurrency: ThreadPoolExecutor
+* Integration: External APIs
+* Output: HTML + Excel
+
+---
+
+## How It Works
+
+1. User inputs batch reference(s)
+2. System retrieves data via API
+3. Data is processed and deduplicated
+4. Warehouse mapping logic is applied
+5. Results are aggregated and displayed
+6. Optional Excel export is generated
+
+---
+
+## Project Structure
+
+```
 hubscope/
 ├── app.py
 └── templates/
     └── index.html
+```
+
+---
+
+## Notes
+
+* This is a public-safe version of an internal tool
+* API endpoints and credentials are not included
+* Warehouse names and routing logic are simplified
+
+---
+---
